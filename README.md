@@ -75,17 +75,6 @@ This project predicts the resale value of used cars based on multiple vehicle fe
 
 ---
 
-### 📂 Repository Structure
-
-```
-├── car_data.csv
-├── used_car_price_prediction.ipynb
-├── README.md
-└── report.pdf  ← [Optional: Upload your project PDF here]
-```
-
----
-
 ### 📈 Future Improvements
 
 * Include additional features like brand reputation, number of past owners, service history.
