@@ -1,49 +1,108 @@
 # Smart-Valuation-of-Pre-Owned-Cars-Using-ML
 
-The focus of this project is to develop machine learning models that can accurately predict the
-price of a used car based on its features. In this project, we investigate supervised machine
-learning models to predict the price of used cars in India. The predictions are based on historical
-data of car details, taken from CarDekho.com. Different models like Random Forest, Extra
-Tree Regressor, Bagging Regressor and Decision Tree have been used to make the predictions.
-The predictions are then compared in order to find those which provide the best performances.
-All four methods provided comparable performance. The number of different attributes is
-measured, and also it has been considered to predict a more reliable and accurate result. We
-also compared the prediction accuracy of these models to determine the best one. Our results
-show that the Random Forest model yields the best results.
+> A machine learning-based solution to estimate the resale price of used cars using various regression algorithms.
+
+---
+
+### 📌 Overview
+
+This project predicts the resale value of used cars based on multiple vehicle features. Using historical data from [CarDekho.com](https://www.cardekho.com), it compares the performance of different regression models including **Decision Tree**, **Random Forest**, **Extra Trees**, and **Bagging Regressor** to determine the most accurate pricing model. The goal is to aid both **buyers** and **sellers** in making informed decisions.
+
+---
+
+### 💻 Tech Stack
+
+* **Language:** Python
+* **Libraries:** pandas, NumPy, scikit-learn, seaborn, matplotlib
+* **Algorithms:**
+
+  * Decision Tree Regressor
+  * Random Forest Regressor
+  * Extra Trees Regressor
+  * Bagging Regressor
+
+---
+
+### 🧪 Dataset
+
+* Sourced from **CarDekho.com**
+* Contains features like:
+
+  * Year
+  * Present Price
+  * Kilometers Driven
+  * Fuel Type
+  * Seller Type
+  * Transmission
+  * Owner
+
+---
+
+### 📊 Methodology
+
+* Data cleaning and preprocessing
+* Feature engineering (e.g., `no_year`, one-hot encoding)
+* Correlation analysis to find most impactful features
+* Model training and evaluation
+* Performance comparison using:
+
+  * **MAE** (Mean Absolute Error)
+  * **MSE** (Mean Squared Error)
+  * **RMSE** (Root Mean Squared Error)
+  * **R² Score**
+  * **Accuracy (%)**
+
+---
+
+### 🏁 Results
+
+| Model             | R² Score   | Accuracy (%) | MAE       | RMSE      |
+| ----------------- | ---------- | ------------ | --------- | --------- |
+| Decision Tree     | 0.9457     | 83.71%       | 0.691     | 1.170     |
+| Random Forest     | 0.9573     | 87.92%       | 0.614     | 1.038     |
+| **Extra Trees**   | **0.9616** | **89.12%**   | **0.542** | **0.984** |
+| Bagging Regressor | 0.9540     | 87.57%       | 0.647     | 1.077     |
+
+✅ **Extra Trees Regressor** achieved the highest accuracy and lowest error, making it the most effective model for this task.
+
+---
+
+### 📌 Key Learnings
+
+* Strong correlation between **present price**, **fuel type**, and **seller type** with resale value.
+* Ensemble models like **Extra Trees** and **Random Forest** perform significantly better than a single decision tree.
+* Feature engineering plays a vital role in boosting model accuracy.
+
+---
+
+### 📂 Repository Structure
+
+```
+├── car_data.csv
+├── used_car_price_prediction.ipynb
+├── README.md
+└── report.pdf  ← [Optional: Upload your project PDF here]
+```
+
+---
+
+### 📈 Future Improvements
+
+* Include additional features like brand reputation, number of past owners, service history.
+* Implement deep learning models or ANN for non-linear relationships.
+* Develop a web app using Flask or Django for end-user predictions.
+
+---
+
+### 👨‍💻 Authors
+
+* **Surya Prakash Nellutla** (19BPS1052)
+* M. Anil (19BPS1047)
+* M. Hanuman Sai (19BPS1066)
+* G. Vijay (19BPS1078)
+
+> Guided by: *Dr. Lakshmi Pathi Jakkamputi – VIT Chennai*
 
 
-## Dataset
-The dataset are based on historical data of car details, taken from CarDekho.com.
-
-## Result
-| Name of Regressor     | R-Squared Score     | Accuracy        |
-| ------------- | ------------- | --------    |
-| Decision Tree Regressor        | 0.9457        | 83.71   |
-| Random Forest Regressor         | 0.9573        | 87.92   |
-| Extra Trees Regressor | 0.9616| 89.12
-|Bagging Regressor |  0.9540| 87.57
-
-## Conclusion
-
-Car sales are more often in metropolitan cities where the young software engineers,
-business man are showing interest to buy the new cars with the updated technology. So, there
-are high chances that they would not want to keep the old car with them and they opt to sale it.
-On the other side, new learners and middle-class families don’t show interest in buying the new
-expensive cars and opt to buy the refurbished cars.
-
-Refurbished Car price prediction is a challenging task as it involves various parameters
-in terms of car specifications and customers satisfaction for solving a high accuracy in
-predicting the sales values. The major step involved in this project is data analysing and preprocessing. It involved the study of various attributes, cleaning, inserting and deleting some of
-the important and redundant parameters for a better understanding and implementing the
-machine learning algorithms.
-
-For this project, the supervised algorithms have been used and four different types of
-regression algorithms has been implemented. The algorithms are implemented on the same
-dataset in terms of testing data. The error calculations such as Mean Absolute Error (MAE),
-Root Mean Squared Error (RMSE) and R-square score were calculated to predict the high
-accuracy among the algorithms. Extra Tree Regressor has outperformed decision tree and
-bagging regressor. By the fact that both random forest and extra trees regressor are equally
-robust the latter slightly dominated. Extra trees regressor is more optimal algorithm for this
-problem statement as it has comparatively less time complexity and also similar accuracy.
 
 
