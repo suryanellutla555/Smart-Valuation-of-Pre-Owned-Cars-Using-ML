@@ -1,61 +1,3 @@
-# Smart-Valuation-of-Pre-Owned-Cars-Using-ML
-
-> A machine learning-based solution to estimate the resale price of used cars using various regression algorithms.
-
----
-
-### 📌 Overview
-
-This project predicts the resale value of used cars based on multiple vehicle features. Using historical data from [CarDekho.com](https://www.cardekho.com), it compares the performance of different regression models including **Decision Tree**, **Random Forest**, **Extra Trees**, and **Bagging Regressor** to determine the most accurate pricing model. The goal is to aid both **buyers** and **sellers** in making informed decisions.
-
----
-
-### 💻 Tech Stack
-
-* **Language:** Python
-* **Libraries:** pandas, NumPy, scikit-learn, seaborn, matplotlib
-* **Algorithms:**
-
-  * Decision Tree Regressor
-  * Random Forest Regressor
-  * Extra Trees Regressor
-  * Bagging Regressor
-
----
-
-### 🧪 Dataset
-
-* Sourced from **CarDekho.com**
-* Contains features like:
-
-  * Year
-  * Present Price
-  * Kilometers Driven
-  * Fuel Type
-  * Seller Type
-  * Transmission
-  * Owner
-
----
-
-### 📊 Methodology
-
-* Data cleaning and preprocessing
-* Feature engineering (e.g., `no_year`, one-hot encoding)
-* Correlation analysis to find most impactful features
-* Model training and evaluation
-* Performance comparison using:
-
-  * **MAE** (Mean Absolute Error)
-  * **MSE** (Mean Squared Error)
-  * **RMSE** (Root Mean Squared Error)
-  * **R² Score**
-  * **Accuracy (%)**
-
----
-
-### 🏁 Results
-
 | Model             | R² Score   | Accuracy (%) | MAE       | RMSE      |
 | ----------------- | ---------- | ------------ | --------- | --------- |
 | Decision Tree     | 0.9457     | 83.71%       | 0.691     | 1.170     |
@@ -63,35 +5,44 @@ This project predicts the resale value of used cars based on multiple vehicle fe
 | **Extra Trees**   | **0.9616** | **89.12%**   | **0.542** | **0.984** |
 | Bagging Regressor | 0.9540     | 87.57%       | 0.647     | 1.077     |
 
-✅ **Extra Trees Regressor** achieved the highest accuracy and lowest error, making it the most effective model for this task.
+📌 Key Takeaways
 
----
+Resale value is strongly influenced by present price, fuel type, and seller type.
 
-### 📌 Key Learnings
+Ensemble models such as Extra Trees and Random Forest provided better results than a standalone Decision Tree.
 
-* Strong correlation between **present price**, **fuel type**, and **seller type** with resale value.
-* Ensemble models like **Extra Trees** and **Random Forest** perform significantly better than a single decision tree.
-* Feature engineering plays a vital role in boosting model accuracy.
+Feature engineering played an important role in improving prediction accuracy.
 
----
+📂 Project Structure
 
-### 📈 Future Improvements
+├── car_data.csv
 
-* Include additional features like brand reputation, number of past owners, service history.
-* Implement deep learning models or ANN for non-linear relationships.
-* Develop a web app using Flask or Django for end-user predictions.
+├── used_car_price_prediction.ipynb
 
----
+├── README.md
 
-### 👨‍💻 Authors
+└── report.pdf   ← (optional project report)
 
-* **Surya Prakash Nellutla** (19BPS1052)
-* M. Anil (19BPS1047)
-* M. Hanuman Sai (19BPS1066)
-* G. Vijay (19BPS1078)
+📈 Scope for Improvement
 
-> Guided by: *Dr. Lakshmi Pathi Jakkamputi – VIT Chennai*
+Add more features like brand reputation, previous owners, and service history.
 
+Experiment with deep learning methods (ANN) for capturing complex non-linear patterns.
 
+Extend the work into a simple Flask/Django web application for live predictions.
 
+👨‍💻 Project Team
 
+Surya Prakash Nellutla (19BPS1052)
+
+M. Anil (19BPS1047)
+
+M. Hanuman Sai (19BPS1066)
+
+G. Vijay (19BPS1078)
+
+Guided by: Dr. Lakshmi Pathi Jakkamputi – VIT Chennai
+
+G. Vijay (19BPS1078)
+
+Guided by: Dr. Lakshmi Pathi Jakkamputi – VIT Chennai
